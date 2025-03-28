@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %} {% block title %}Add a task {% endblock %} {%
+block body %}
+<turbo-frame id="id-category">
+	<div>
+		{{ form_start(form) }}
+		{{ form_label(formulaire.title) }}
+		{{ form_widget(form.title) }}
+		{{ form_label(formulaire.content) }}
+		{{ form_widget(form.content) }}
+		{{ form_label(formulaire.expiredAt) }}
+		{{ form_widget(form.expiredAt) }}
+		{{ form_rest(form) }}
+		{{ form_end(form) }}
+	</div>
+</turbo-frame>
+{% endblock %}
