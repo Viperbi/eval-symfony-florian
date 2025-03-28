@@ -27,10 +27,10 @@ class Task
     private ?string $content = null;
 
     #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $createdAt = null;
+    private ?\DateTime $createdAt = null;
 
     #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $expiredAt = null;
+    private ?\DateTime $expiredAt = null;
 
     #[ORM\Column(nullable: true)]
     private ?bool $status = null;
@@ -64,24 +64,24 @@ class Task
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt(?\DateTimeImmutable $createdAt): static
+    public function setCreatedAt(?\DateTime $createdAt): static
     {
         $this->createdAt = $createdAt;
 
         return $this;
     }
 
-    public function getExpiredAt(): ?\DateTimeImmutable
+    public function getExpiredAt(): ?\DateTime
     {
         return $this->expiredAt;
     }
 
-    public function setExpiredAt(?\DateTimeImmutable $expiredAt): static
+    public function setExpiredAt(?\DateTime $expiredAt): static
     {
         $this->expiredAt = $expiredAt;
 
